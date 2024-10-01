@@ -1,0 +1,142 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- CSS styling elements-->
+    <style>
+        .clock {
+            height: 700px;
+            width: 700px;
+            background-color: peachpuff;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .focalPoint{
+            height: 25px;
+            width: 25px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .hourHand{
+            position: absolute;
+            height: 200px;
+            width: 10px;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 100%; 
+            transform: translate(-50%, 0) rotate(0deg);
+        }
+        .minuteHand{
+            position: absolute;
+            height: 300px;
+            width: 5px;
+            background-color: gray;
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 100%; 
+            transform: translate(-50%, -100%) rotate(0deg);
+        }
+
+        .secondHand{
+            position: absolute;
+            height: 300px;
+            width: 2px;
+            background-color: rgb(0, 0, 0);
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 100%; 
+            transform: translate(-50%, -100%) rotate(0deg);
+        }
+
+        .numberingOnClock{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size: 40px;
+            transform: translate(-50%, -50%);
+            color: rgb(51, 70, 213);
+            
+        }
+        /*an invisible line that orients the correct placement of the numbers on the clock*/
+        .orientingLine{
+            position: absolute;
+            height: 300px;
+            width: 5px;
+            color: rgb(0, 0, 0);
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 100%; 
+            transform: translate(-50%, -100%) rotate(0deg);
+            font-size: 40px;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- Puts features on the page-->
+    <div class ="clock">
+        <div class="focalPoint"></div>
+        <div class="hourHand"></div>
+        <div class="minuteHand"></div>
+        <div class="secondHand"></div>
+        
+        <!--Places the numbers on the correct spot by combining the .oreintingline class and .numberOnClock class-->
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(0deg);">
+            <div class="numberingOnClock">12</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(30deg);">
+            <div class="numberingOnClock">1</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(60deg);">
+            <div class="numberingOnClock">2</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(90deg);">
+            <div class="numberingOnClock">3</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(120deg);">
+            <div class="numberingOnClock">4</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(150deg);">
+            <div class="numberingOnClock">5</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(180deg);">
+            <div class="numberingOnClock">6</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(210deg);">
+            <div class="numberingOnClock">7</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(240deg);">
+            <div class="numberingOnClock">8</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(270deg);">
+            <div class="numberingOnClock">9</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(300deg);">
+            <div class="numberingOnClock">10</div>
+        </div>
+        <div class="orientingLine" style="transform: translate(-50%, -100%) rotate(330deg);">
+            <div class="numberingOnClock">11</div>
+        </div>
+        
+    </div>
+    
+    <script src="clock.js">
+    </script>
+</body>
+</html>
